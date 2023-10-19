@@ -1,8 +1,9 @@
+
 package grupofp.vista;
 
 import grupofp.controlador.Controlador;
 import java.util.Scanner;
-public class GestionOS {
+public class GestionOS{
     private Controlador controlador;
     Scanner teclado = new Scanner(System.in);
     public GestionOS() {
