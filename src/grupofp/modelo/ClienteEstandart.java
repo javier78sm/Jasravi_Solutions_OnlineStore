@@ -1,5 +1,4 @@
 package grupofp.modelo;
 
-public class ClienteEstandart extends Cliente {
-
+public class ClienteEstandart {
 }

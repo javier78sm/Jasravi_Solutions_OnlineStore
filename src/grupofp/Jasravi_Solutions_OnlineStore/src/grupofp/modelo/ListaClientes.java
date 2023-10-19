@@ -1,4 +1,5 @@
 package grupofp.modelo;
 
-public class ListaClientes {
+public class ListaClientes extends Lista<Clientes> {
+// TO-BE-DONE
 }

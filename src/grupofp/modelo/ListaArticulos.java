@@ -1,4 +1,5 @@
 package grupofp.modelo;
 
-public class ListaArticulos {
+ppublic class ListaArticulos extends Lista<Articulo> {
+// TO-BE-DONE
 }
