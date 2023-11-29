@@ -1,40 +1,27 @@
 package grupofp.modelo;
 
-import java.time.LocalDate;
-
-public class Articulo {
-    private String codigo;
+public class Articulo{
+    private String idArticulo;
     private String descripcion;
-    private Double precio;
-    private  Double gastosEnvio;
-    private LocalDate preparacionEnvio;
+    private float precio;
+    private float gastosEnvio;
+    private int tiempoPreparacion;
 
-    /**
-     * CREAMOS EL CONSTRUCTOR
-     * @param codigo
-     * @param descripcion
-     * @param precio
-     * @param gastosEnvio
-     * @param preparacionEnvio
-     */
-    public Articulo(String codigo, String descripcion, Double precio, Double gastosEnvio, LocalDate preparacionEnvio) {
-        this.codigo = codigo;
+    public Articulo(){}
+    public Articulo(String idArticulo, String descripcion, float precio, float gastosEnvio, int tiempoPreparacion) {
+        this.idArticulo = idArticulo;
         this.descripcion = descripcion;
         this.precio = precio;
         this.gastosEnvio = gastosEnvio;
-        this.preparacionEnvio = preparacionEnvio;
+        this.tiempoPreparacion = tiempoPreparacion;
     }
 
-    /***
-     *
-     * @return
-     */
-    public String getCodigo() {
-        return codigo;
+    public String getIdArticulo() {
+        return idArticulo;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setIdArticulo(String idArticulo) {
+        this.idArticulo = idArticulo;
     }
 
     public String getDescripcion() {
@@ -45,42 +32,39 @@ public class Articulo {
         this.descripcion = descripcion;
     }
 
-    public Double getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Double precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 
-    public Double getGastosEnvio() {
+    public float getGastosEnvio() {
         return gastosEnvio;
     }
 
-    public void setGastosEnvio(Double gastosEnvio) {
+    public void setGastosEnvio(float gastosEnvio) {
         this.gastosEnvio = gastosEnvio;
     }
 
-    public LocalDate getPreparacionEnvio() {
-        return preparacionEnvio;
+    public int getTiempoPreparacion() {
+        return tiempoPreparacion;
     }
 
-    public void setPreparacionEnvio(LocalDate preparacionEnvio) {
-        this.preparacionEnvio = preparacionEnvio;
+    public void setTiempoPreparacion(int tiempoPreparacion) {
+        this.tiempoPreparacion = tiempoPreparacion;
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public String toString() {
-        return "ARTICULO{" +
-                "codigo='" + codigo + '\'' +
+        return "Articulo{" +
+                "idArticulo='" + idArticulo + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", precio=" + precio +
                 ", gastosEnvio=" + gastosEnvio +
-                ", preparacionEnvio=" + preparacionEnvio +
+                ", tiempoPreparacion=" + tiempoPreparacion +
                 '}';
     }
+
 }
