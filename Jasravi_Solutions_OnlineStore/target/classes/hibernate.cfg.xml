@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+        <!-- Configuración de la conexión a la base de datos -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/onlinestore</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1234</property>
+
+        <!-- Configuración del dialecto de la base de datos -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Configuración del proveedor de conexión -->
+        <property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+
+<!--
+        &lt;!&ndash; Configuración de propiedades para logging &ndash;&gt;
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.use_sql_comments">true</property>
+-->
+
+        <!-- Configuración de mapeo de clases -->
+        <mapping class="grupofp.modelo.Articulo"/>
+        <mapping class="grupofp.modelo.Cliente"/>
+        <mapping class="grupofp.modelo.ClienteEstandar"/>
+        <mapping class="grupofp.modelo.ClientePremium"/>
+        <mapping class="grupofp.modelo.Pedido"/>
+        <mapping class="grupofp.modelo.Datos"/>
+
+    </session-factory>
+
+</hibernate-configuration>
+
